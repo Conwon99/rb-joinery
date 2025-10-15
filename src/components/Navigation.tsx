@@ -75,7 +75,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-20 h-20 md:w-24 md:h-24">
+            <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
               <LazyImage
                 src="/rblogo - Edited.png"
                 alt="RB Joinery logo"
@@ -84,8 +84,31 @@ const Navigation = () => {
             </div>
           </div>
 
+          {/* Tablet Navigation */}
+          <div className="hidden md:flex lg:hidden items-center space-x-4">
+            {navItems.slice(0, 3).map((item) => (
+              item.isLink ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-white hover:text-green-400 transition-colors duration-200 font-medium text-sm"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={item.onClick}
+                  className="text-white hover:text-green-400 transition-colors duration-200 font-medium text-sm"
+                >
+                  {item.label}
+                </button>
+              )
+            ))}
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               item.isLink ? (
                 <Link
@@ -107,8 +130,31 @@ const Navigation = () => {
             ))}
           </div>
 
+          {/* Tablet CTA */}
+          <div className="hidden md:flex lg:hidden items-center space-x-2">
+            <Button
+              onClick={handleCallClick}
+              variant="ghost"
+              className="flex items-center gap-2 text-gray-300 hover:text-white bg-transparent hover:bg-transparent p-0"
+            >
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
+                <Phone className="w-5 h-5 text-green-600" />
+              </div>
+              <div className="flex flex-col items-start">
+                <span className="text-xs text-gray-300 font-medium">CALL</span>
+                <span className="text-lg font-bold text-white">07927 726622</span>
+              </div>
+            </Button>
+            <Button
+              onClick={handleQuoteClick}
+              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full font-semibold text-sm"
+            >
+              Quote
+            </Button>
+          </div>
+
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             <Button
               onClick={handleCallClick}
               variant="ghost"
@@ -119,7 +165,7 @@ const Navigation = () => {
               </div>
               <div className="flex flex-col items-start">
                 <span className="text-sm text-gray-300 font-medium">CALL US NOW</span>
-                <span className="text-2xl md:text-3xl font-bold text-white">07927 726622</span>
+                <span className="text-xl lg:text-2xl font-bold text-white">07927 726622</span>
               </div>
             </Button>
             <Button
@@ -130,9 +176,9 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile/Tablet Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -143,9 +189,9 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile/Tablet Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-black border-t border-white/10 shadow-lg">
+          <div className="lg:hidden bg-black border-t border-white/10 shadow-lg">
             <div className="py-4 space-y-4">
               {navItems.map((item) => (
                 item.isLink ? (

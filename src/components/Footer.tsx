@@ -44,29 +44,29 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-white">
               <li>
-                <Link to="/house-extensions" className="hover:text-gray-300 transition-colors">
+                <a href="#services" className="hover:text-gray-300 transition-colors">
                   • House Extensions
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/loft-conversions" className="hover:text-gray-300 transition-colors">
+                <a href="#services" className="hover:text-gray-300 transition-colors">
                   • Loft Conversions
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/garden-rooms" className="hover:text-gray-300 transition-colors">
+                <a href="#services" className="hover:text-gray-300 transition-colors">
                   • Garden Rooms
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/kitchen-installation" className="hover:text-gray-300 transition-colors">
+                <a href="#services" className="hover:text-gray-300 transition-colors">
                   • Kitchen Installation
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/home-improvements" className="hover:text-gray-300 transition-colors">
+                <a href="#services" className="hover:text-gray-300 transition-colors">
                   • Home Improvements
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -78,34 +78,22 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-white">
               <li>
-                <Link to="/ayrshire" className="hover:text-gray-300 transition-colors">
-                  • Joinery in Ayrshire
-                </Link>
+                • Joinery in Ayrshire
               </li>
               <li>
-                <Link to="/glasgow" className="hover:text-gray-300 transition-colors">
-                  • Joinery in Glasgow
-                </Link>
+                • Joinery in Glasgow
               </li>
               <li>
-                <a href="#about" className="hover:text-gray-300 transition-colors">
-                  • House Extensions Ayrshire
-                </a>
+                • House Extensions Ayrshire
               </li>
               <li>
-                <a href="#about" className="hover:text-gray-300 transition-colors">
-                  • House Extensions Glasgow
-                </a>
+                • House Extensions Glasgow
               </li>
               <li>
-                <a href="#about" className="hover:text-gray-300 transition-colors">
-                  • Building Services Ayrshire
-                </a>
+                • Building Services Ayrshire
               </li>
               <li>
-                <a href="#about" className="hover:text-gray-300 transition-colors">
-                  • Building Services Glasgow
-                </a>
+                • Building Services Glasgow
               </li>
             </ul>
           </div>

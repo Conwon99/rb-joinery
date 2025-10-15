@@ -17,35 +17,35 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What services does RB Joinery provide?",
-      answer: "We provide comprehensive landscaping and building services including garden maintenance, landscaping & groundworks, patios, fencing & decking, pressure washing, and building services. Our team handles everything from routine garden upkeep to complete outdoor transformations."
+      answer: "We provide professional joinery and building services including house extensions, loft conversions, garden rooms, kitchen installations, and home improvements. Our team specializes in carpentry, construction, and complete home transformations across Ayrshire and Glasgow."
     },
     {
       question: "What areas do you cover?",
       answer: "We serve Ayrshire and Glasgow areas. Contact us to confirm coverage for your specific location and discuss your project requirements."
     },
     {
-      question: "Do you offer garden maintenance services?",
-      answer: "Yes, we provide regular garden maintenance including lawn care, hedge trimming, planting & tidy-ups, and seasonal maintenance. We can work on a one-off basis or provide ongoing maintenance schedules to keep your garden looking its best year-round."
+      question: "Do you offer house extensions?",
+      answer: "Yes, we specialize in house extensions including single storey and two storey extensions. We handle the complete process from initial design consultation through to planning permission and construction, ensuring all work meets building regulations and your specific requirements."
     },
     {
       question: "What building services do you offer?",
-      answer: "Our building services include brickwork, repairs, small extensions, and general building work. We handle both residential and commercial projects, ensuring all work meets high standards and local building regulations."
+      answer: "Our building services include house extensions, loft conversions, garden rooms, kitchen installations, and home improvements. We handle both residential and commercial projects, ensuring all work meets high standards and local building regulations."
     },
     {
-      question: "Do you provide pressure washing services?",
-      answer: "Yes, we offer professional pressure washing for driveways, patios, paths, and walls. We can remove stubborn stains and restore the appearance of your outdoor surfaces. We also offer soft-wash options for more delicate surfaces."
+      question: "Do you provide loft conversions?",
+      answer: "Yes, we specialize in loft conversions including dormer and Velux conversions. We can transform your loft space into beautiful, functional rooms such as bedrooms, home offices, or playrooms, adding significant value to your property."
     },
     {
-      question: "Do you install fencing and decking?",
-      answer: "Absolutely! We provide comprehensive fencing and decking services including new installations, repairs, and maintenance. We work with various materials and can create custom solutions to meet your specific needs and budget."
+      question: "Do you build garden rooms?",
+      answer: "Absolutely! We provide comprehensive garden room construction including home offices, garden studios, garden gyms, and entertainment spaces. We work with various materials and can create bespoke solutions to meet your specific needs and budget."
     },
     {
       question: "How long does a typical project take?",
-      answer: "Project duration depends on size and complexity. Simple maintenance tasks may take a few hours, while larger landscaping or building projects may take several days to weeks. We provide realistic timelines during the quote process and keep you updated throughout the project."
+      answer: "Project duration depends on size and complexity. Simple improvements may take a few days, while larger projects like house extensions or loft conversions may take several weeks to months. We provide realistic timelines during the quote process and keep you updated throughout the project."
     },
     {
       question: "Do you offer free quotes?",
-      answer: "Yes, we provide completely free, no-obligation quotes for all our services. You can request a quote by calling 07403 725998, emailing us at dirtworkslandscaping@outlook.com, or using our contact form. We'll assess your needs and provide a detailed, transparent quote with no hidden costs."
+      answer: "Yes, we provide completely free, no-obligation quotes for all our services. You can request a quote by calling 07927 726622, messaging us on WhatsApp, emailing us at ryan@rbjoinery.com, or using our contact form. We'll assess your needs and provide a detailed, transparent quote with no hidden costs."
     }
   ];
 
@@ -77,7 +77,7 @@ const FAQ = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-[hsl(var(--asphalt-grey))] max-w-3xl mx-auto">
-              Common questions about our garden maintenance, landscaping, building services, pressure washing, fencing, and decking services in Ayrshire and Glasgow
+              Common questions about our joinery, building services, house extensions, loft conversions, garden rooms, and home improvements in Ayrshire and Glasgow
             </p>
           </div>
 
@@ -116,14 +116,14 @@ const FAQ = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+447403725998"
-                onClick={() => trackPhoneCall('faq_section')}
+                onClick={() => trackPhoneCall('faq_section_call_button')}
                 className="inline-flex items-center justify-center px-6 py-3 bg-[hsl(var(--primary-blue))] text-white rounded-full font-semibold hover:bg-[hsl(var(--primary-blue))]/90 transition-colors"
               >
-                Call 07403 725998
+                Call 07927 726622
               </a>
               <button
                 onClick={() => {
-                  trackQuoteRequest('faq_section', []);
+                  trackQuoteRequest('faq_section_quote_button', []);
                   document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-[hsl(var(--primary-blue))] text-[hsl(var(--primary-blue))] rounded-full font-semibold hover:bg-[hsl(var(--primary-blue))] hover:text-white transition-colors"

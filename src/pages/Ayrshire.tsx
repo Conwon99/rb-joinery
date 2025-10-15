@@ -60,7 +60,7 @@ const Ayrshire = () => {
             "description": "Professional landscaping and building services across Ayrshire including Ayr, Kilmarnock, Irvine, Troon, and Prestwick.",
             "url": "https://dirtworkslandscaping.co.uk/ayrshire",
             "telephone": "+447403725998",
-            "email": "dirtworkslandscaping@outlook.com",
+            "email": "ryan@rbjoinery.com",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Ayr",
@@ -151,7 +151,7 @@ const Ayrshire = () => {
                     className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 text-lg font-semibold rounded-full"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Call 07403 725998
+                    Call 07927 726622
                   </Button>
                 </div>
               </div>
@@ -457,7 +457,7 @@ const Ayrshire = () => {
                 className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg font-semibold rounded-full"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call 07403 725998
+                Call 07927 726622
               </Button>
             </div>
           </div>
@@ -477,7 +477,7 @@ const Ayrshire = () => {
                   onClick={handleCallClick}
                   className="text-green-600 hover:text-green-700"
                 >
-                  07403 725998
+                  07927 726622
                 </a>
               </div>
               <div>
@@ -486,11 +486,11 @@ const Ayrshire = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                 <a 
-                  href="mailto:dirtworkslandscaping@outlook.com" 
+                  href="mailto:ryan@rbjoinery.com" 
                   onClick={handleEmailClick}
                   className="text-green-600 hover:text-green-700"
                 >
-                  dirtworkslandscaping@outlook.com
+                  ryan@rbjoinery.com
                 </a>
               </div>
               <div>

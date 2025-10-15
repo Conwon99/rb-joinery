@@ -24,9 +24,10 @@ const AboutUs = () => {
               {/* Social Media Icons */}
               <div className="flex items-center gap-3 sm:gap-4">
                 <a 
-                  href="https://www.facebook.com/profile.php?id=61573221204538" 
+                  href="https://www.facebook.com/people/RB-Joinery/61577983282534/" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackExternalLink('https://www.facebook.com/people/RB-Joinery/61577983282534/', 'about_us_facebook_button')}
                   className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors flex-shrink-0"
                 >
                   <Facebook className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -35,7 +36,7 @@ const AboutUs = () => {
                   href="https://wa.me/447927726622" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick('whatsapp_click_about')}
+                  onClick={() => trackWhatsAppClick('about_us_whatsapp_button')}
                   className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors flex-shrink-0"
                 >
                   <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5" color="black" />

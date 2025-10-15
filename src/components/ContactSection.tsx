@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { trackPhoneCall, trackWhatsAppClick, trackQuoteRequest, trackFormInteraction, trackEmailClick } from "@/utils/analytics";
@@ -13,24 +12,16 @@ const ContactSection = () => {
     name: '',
     email: '',
     phone: '',
-    service: '',
     message: ''
   });
   const { toast } = useToast();
 
-  const serviceOptions = [
-    'House Extensions',
-    'Loft Conversions',
-    'Garden Rooms',
-    'Kitchen Installation',
-    'Home Improvements'
-  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://formspree.io/f/mgvnlora', {
+      const response = await fetch('https://formspree.io/f/xanpaopz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,14 +30,13 @@ const ContactSection = () => {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          service: formData.service,
           message: formData.message,
           _subject: 'Free Quote Request from Website'
         }),
       });
 
       if (response.ok) {
-        trackQuoteRequest('contact_form', [formData.service]);
+        trackQuoteRequest('contact_form', []);
         trackFormInteraction('quote_form', { status: 'submit_success' });
         
         toast({
@@ -58,7 +48,6 @@ const ContactSection = () => {
           name: '',
           email: '',
           phone: '',
-          service: '',
           message: ''
         });
       } else {
@@ -75,17 +64,17 @@ const ContactSection = () => {
   };
 
   const handleCallClick = () => {
-    trackPhoneCall('contact_section');
+    trackPhoneCall('contact_section_call_button');
     window.location.href = "tel:+447927726622";
   };
 
   const handleMessengerClick = () => {
-    trackWhatsAppClick('whatsapp_click_contact');
+    trackWhatsAppClick('contact_section_whatsapp_button');
     window.open("https://wa.me/447927726622", "_blank");
   };
 
   const handleEmailClick = () => {
-    trackEmailClick('contact_section');
+    trackEmailClick('contact_section_email_link');
   };
 
   return (
@@ -120,7 +109,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-[hsl(var(--asphalt-grey))] text-sm sm:text-base">Phone</p>
-                  <a href="tel:+447927726622" onClick={handleCallClick} className="text-[hsl(var(--primary-green))] hover:underline text-sm sm:text-base">
+                  <a href="tel:+447927726622" onClick={() => trackPhoneCall('contact_section_phone_link')} className="text-[hsl(var(--primary-green))] hover:underline text-sm sm:text-base">
                     07927 726622
                   </a>
                 </div>
@@ -132,7 +121,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-[hsl(var(--asphalt-grey))] text-sm sm:text-base">Email</p>
-                  <a href="mailto:Ryan@rbjoinery.com" onClick={handleEmailClick} className="text-[hsl(var(--primary-green))] hover:underline text-xs sm:text-sm break-all">
+                  <a href="mailto:Ryan@rbjoinery.com" onClick={() => trackEmailClick('contact_section_email_display')} className="text-[hsl(var(--primary-green))] hover:underline text-xs sm:text-sm break-all">
                     Ryan@rbjoinery.com
                   </a>
                 </div>
@@ -223,21 +212,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              <div>
-                <Label htmlFor="service" className="text-[hsl(var(--asphalt-grey))] font-semibold text-sm sm:text-base">Service Required</Label>
-                <Select value={formData.service} onValueChange={(value) => setFormData(prev => ({ ...prev, service: value }))}>
-                  <SelectTrigger className="mt-1 sm:mt-2 rounded-xl border-2 text-sm sm:text-base">
-                    <SelectValue placeholder="Select a service" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {serviceOptions.map((service) => (
-                      <SelectItem key={service} value={service}>
-                        {service}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
 
               <div>
                 <Label htmlFor="message" className="text-[hsl(var(--asphalt-grey))] font-semibold text-sm sm:text-base">Project Details</Label>

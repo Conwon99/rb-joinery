@@ -28,7 +28,7 @@ const Navigation = () => {
   }, []);
 
   const handleCallClick = () => {
-    trackPhoneCall('navigation');
+    trackPhoneCall('navigation_call_button');
     window.location.href = "tel:+447927726622";
   };
 

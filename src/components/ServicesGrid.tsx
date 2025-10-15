@@ -20,13 +20,13 @@ const SERVICE_CARDS: ServiceCard[] = [
     title: "Loft Conversions",
     description: "Transform your loft space into beautiful, functional rooms",
     features: ["Dormer conversions", "Velux conversions", "Bespoke designs", "Planning support"],
-    image: "/gallery/imgi_53_529945713_122119545326932776_1683007488166191447_n - Copy - Copy.jpg",
+    image: "/Services/Loft..jpg",
   },
   {
     title: "Garden Rooms",
     description: "Create the perfect outdoor living space with bespoke garden rooms",
     features: ["Home offices", "Garden studios", "Garden gyms", "Entertainment spaces"],
-    image: "/gallery/imgi_54_531882235_122119545026932776_7092298327067455591_n.jpg",
+    image: "/Services/garden room.webp",
   },
   {
     title: "Kitchen Installation",
@@ -38,13 +38,13 @@ const SERVICE_CARDS: ServiceCard[] = [
     title: "Home Improvements",
     description: "Complete home improvement and renovation services",
     features: ["Complete renovations", "Structural work", "Interior upgrades", "Property maintenance"],
-    image: "/Services/Home Improvement..jpg",
+    image: "/Services/home improv.jpg",
   },
 ];
 
 const ServicesGrid = () => {
   const handleQuoteClick = (serviceTitle: string) => {
-    trackQuoteRequest('services_grid', [serviceTitle]);
+    trackQuoteRequest('services_grid_quote_button', [serviceTitle]);
     trackServiceClick(serviceTitle, 'services_grid');
     document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
   };

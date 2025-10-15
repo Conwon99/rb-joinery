@@ -44,7 +44,7 @@ const Gallery = () => {
   };
 
   const handleFacebookClick = () => {
-    trackExternalLink('https://www.facebook.com/profile.php?id=61573221204538', 'View more work on Facebook');
+    trackExternalLink('https://www.facebook.com/people/RB-Joinery/61577983282534/', 'gallery_facebook_button');
   };
 
   return (
@@ -85,7 +85,7 @@ const Gallery = () => {
         {/* View More Button */}
         <div className="text-center mt-12">
           <a
-            href="https://www.facebook.com/profile.php?id=61573221204538"
+            href="https://www.facebook.com/people/RB-Joinery/61577983282534/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleFacebookClick}
